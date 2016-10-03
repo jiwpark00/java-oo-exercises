@@ -50,7 +50,7 @@ public class Computer {
 	
 	// Add memory
 	public void addMemory(int newMemory) {
-		if (this.memory + newMemory > 8) {
+		if (this.memory + newMemory > 16) {
 			return;
 		}
 		else {
