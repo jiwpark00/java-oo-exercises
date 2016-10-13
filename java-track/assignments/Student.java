@@ -90,6 +90,16 @@ public class Student {
 		return 20000.0*semester + Math.round(20000.0/15*100.0)/100.0*leftoverCredits;
 	}
 	
+	public Student createLegacy(Student parent1, Student parent2) {
+		return new Student(parent1.getName(), parent2.getName(),
+				parent1.getStudentID()+parent2.getStudentID(),
+				Math.max(parent1.getCredits(), parent2.getCredits()),
+				(parent1.getGPA()+parent2.getGPA())/2.0);
+		
+		// This essentially creates a new Student object through existing two Students
+		// #Legacy
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//3-decimal place testing System.out.println(Math.round(Math.random()*10.0)/10.0);
