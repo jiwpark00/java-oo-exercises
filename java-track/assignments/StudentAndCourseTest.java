@@ -128,7 +128,7 @@ public class StudentAndCourseTest extends TestCase {
 
 		}
 	}
-	/*
+	
 	@Test
 	public void testStudentToString() {
 		for (int i = 0; i < 100; i++) {
@@ -141,7 +141,7 @@ public class StudentAndCourseTest extends TestCase {
 			assertTrue("student toString does not contain student ID", s.toString().contains("" + c));
 		}
 	}
-	*/
+	
 
 
 

@@ -100,6 +100,10 @@ public class Student {
 		// #Legacy
 	}
 	
+	public String toString() {
+		return this.getName() + Integer.toString(this.getStudentID());
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//3-decimal place testing System.out.println(Math.round(Math.random()*10.0)/10.0);
