@@ -4,6 +4,14 @@ public class Student {
 	private int StudentID;
 	private int Credits;
 	private double GPA;
+
+	// Below is the constructor for Freshman Student
+	public Student(String firstName, String lastName, int StudentID) {
+		this.Name = firstName + " " + lastName;
+		this.StudentID = StudentID;
+		this.Credits = 0;
+		this.GPA = 0.0;
+	}
 	
 	public Student(String firstName, String lastName, int StudentID, int Credits, double GPA) {
 		this.Name = firstName + " " + lastName;
@@ -31,6 +39,33 @@ public class Student {
 	public void setName(String Name) {
 		this.Name = Name;
 	} // This sets the Name to the defined String.
+	
+	public void setStudentID(int StudentID) {
+		this.StudentID = StudentID;
+	}
+	
+	public void setCredits(int Credits) {
+		this.Credits = Credits;
+	}
+	
+	public void setGPA(double GPA) {
+		this.GPA = GPA;
+	}
+	
+	public String getClassStanding() {
+		if (this.Credits < 30) {
+			return "Freshman";
+		}
+		else if (this.Credits > 30 && this.Credits <= 60) {
+			return "Sophomore";
+		}
+		else if (this.Credits > 60 && this.Credits <= 90) {
+			return "Junior";
+		}
+		else {
+			return "Senior";
+		}
+	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

@@ -1,4 +1,3 @@
-package pset9;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
@@ -38,7 +37,7 @@ public class StudentAndCourseTest extends TestCase {
 			assertEquals(s5, "Freshman", s3.getClassStanding());
 		}
 	}
-
+	
 	@Test
 	public void testGetClassStanding() {
 		Student s = new Student("D", "S", 1);
@@ -63,7 +62,7 @@ public class StudentAndCourseTest extends TestCase {
 		}
 
 	}
-
+	/*
 	@Test
 	public void testSubmitGrade() {
 		Student s = new Student("D", "S", 1);
@@ -169,7 +168,7 @@ public class StudentAndCourseTest extends TestCase {
 			assertTrue("student toString does not contain student ID", s.toString().contains("" + c));
 		}
 	}
-
+	*/
 
 
 
