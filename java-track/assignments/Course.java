@@ -67,6 +67,10 @@ public class Course {
 		
 	}
 	
+	public String toString() {
+		return this.getName() + " " + "(" + this.getCredits() + ")";
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
