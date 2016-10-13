@@ -76,6 +76,20 @@ public class Student {
 		this.GPA = (Math.round( (double) totalQualityScore*1000.0/this.Credits)/1000.0);
 	}
 	
+	public double computeTuition() {
+		
+		// Printing this gives initially
+		// System.out.println(this.Credits); as 1
+		// which means, we start with 1 credit.
+		// But, 1 credit still costs $20000.
+		// NVM - checked the updated StudentAndCourseTest.java and that passes.
+		
+		int semester = this.Credits/15;
+		int leftoverCredits = this.Credits % 15;
+		
+		return 20000.0*semester + Math.round(20000.0/15*100.0)/100.0*leftoverCredits;
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//3-decimal place testing System.out.println(Math.round(Math.random()*10.0)/10.0);
