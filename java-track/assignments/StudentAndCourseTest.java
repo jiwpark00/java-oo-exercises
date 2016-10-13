@@ -162,7 +162,7 @@ public class StudentAndCourseTest extends TestCase {
 			assertEquals("course getRemainingSeats() not working, or seats not being set properly", s, c2.getRemainingSeats());
 		}
 	}
-	/*
+	
 	@Test
 	public void testAddStudent() {
 		for (int i = 0; i < 100; i++) {
@@ -193,7 +193,7 @@ public class StudentAndCourseTest extends TestCase {
 			}
 		}
 	}
-
+	/*
 	@Test
 	public void testAverageGPA() {
 		for (int j = 0; j < 100; j++) {
