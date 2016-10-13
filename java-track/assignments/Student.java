@@ -73,7 +73,7 @@ public class Student {
 		this.Credits = this.Credits + newCourseCredits;
 		double totalQualityScore = oldQualityScore + qualityScore;
 		
-		this.GPA = (Math.round((double) totalQualityScore)*1000.0)/(this.Credits*1000.0);
+		this.GPA = (Math.round( (double) totalQualityScore*1000.0/this.Credits)/1000.0);
 	}
 	
 	public static void main(String[] args) {

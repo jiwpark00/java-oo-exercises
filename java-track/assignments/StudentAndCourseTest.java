@@ -62,7 +62,7 @@ public class StudentAndCourseTest extends TestCase {
 		}
 
 	}
-	/*
+	
 	@Test
 	public void testSubmitGrade() {
 		Student s = new Student("D", "S", 1);
@@ -78,7 +78,7 @@ public class StudentAndCourseTest extends TestCase {
 			assertTrue("GPA not rounded", (s.getGPA() + "").length() < 6);
 		}
 	}
-	
+	/*
 	@Test
 	public void testComputeTuition() {
 		Student s = new Student("D", "S", 1);
