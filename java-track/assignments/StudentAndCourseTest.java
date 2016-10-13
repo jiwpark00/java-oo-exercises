@@ -173,7 +173,7 @@ public class StudentAndCourseTest extends TestCase {
 
 
 
-
+	/*
 	// TESTING COURSE CLASS HERE . . . FEEL FREE TO WRITE YOUR OWN, BUT DON'T CHANGE THIS ONE
 	// once again, we are watching you
 
@@ -255,6 +255,6 @@ public class StudentAndCourseTest extends TestCase {
 		}
 	}
 
-
+	*/
 
 }

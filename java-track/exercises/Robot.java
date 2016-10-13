@@ -6,7 +6,6 @@ public class Robot {
 	private int y_position;
 	private int speed;
 	private String orientation;
-	
 	//
 	
 	public Robot(String name, int x_position, int y_position, int speed, String orientation) {
@@ -29,6 +28,7 @@ public class Robot {
 			return "east";
 		}
 	}
+	
 	
 	public static void main(String args[]) {
 		Robot robot1 = new Robot("Watson",0,0,15,"north");
