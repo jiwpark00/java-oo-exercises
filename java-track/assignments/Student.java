@@ -56,10 +56,10 @@ public class Student {
 		if (this.Credits < 30) {
 			return "Freshman";
 		}
-		else if (this.Credits > 30 && this.Credits <= 60) {
+		else if (this.Credits < 60) {
 			return "Sophomore";
 		}
-		else if (this.Credits > 60 && this.Credits <= 90) {
+		else if (this.Credits < 90) {
 			return "Junior";
 		}
 		else {
@@ -67,9 +67,18 @@ public class Student {
 		}
 	}
 	
+	public void submitGrade(double newCourseGrade, int newCourseCredits) {
+		double qualityScore = newCourseGrade*newCourseCredits;
+		double oldQualityScore = this.GPA*this.Credits;
+		this.Credits = this.Credits + newCourseCredits;
+		double totalQualityScore = oldQualityScore + qualityScore;
+		
+		this.GPA = (Math.round((double) totalQualityScore)*1000.0)/(this.Credits*1000.0);
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		//3-decimal place testing System.out.println(Math.round(Math.random()*10.0)/10.0);
 	}
 
 }
