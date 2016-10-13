@@ -52,6 +52,21 @@ public class Course {
 		return true;
 	}
 	
+	public double averageGPA() {
+		int actualStudentCount = 0;
+		double actualStudentGPASum = 0.0;
+		
+		for (int i = 0; i < Roster.length; i++) {
+			if (Roster[i] != null) {
+				actualStudentCount += 1;
+				actualStudentGPASum += Roster[i].getGPA();
+			}
+		}
+		
+		return (double) actualStudentGPASum/actualStudentCount;
+		
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 

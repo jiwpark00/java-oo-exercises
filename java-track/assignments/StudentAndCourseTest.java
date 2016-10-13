@@ -193,7 +193,7 @@ public class StudentAndCourseTest extends TestCase {
 			}
 		}
 	}
-	/*
+	
 	@Test
 	public void testAverageGPA() {
 		for (int j = 0; j < 100; j++) {
@@ -215,7 +215,7 @@ public class StudentAndCourseTest extends TestCase {
 			}
 		}
 	}
-
+	/*
 	@Test
 	public void testCourseToString() {
 		for (int i = 0; i < 100; i++) {
