@@ -16,6 +16,13 @@ public class Robot {
 		this.orientation = orientation;
 	}
 	
+	public int giveXPos() {
+		return x_position;
+	}
+	
+	public int giveYPos() {
+		return y_position;
+	}
 	
 	public String giveName() {
 		return name;
@@ -40,10 +47,19 @@ public class Robot {
 		}
 	}
 	
+	public double giveDistance(Robot r1) {
+		double distance = Math.sqrt( Math.pow(r1.giveXPos() - this.giveXPos(),2) +
+				Math.pow(r1.giveYPos() - this.giveYPos(),2) ); 
+		return ((double) distance*1000.0)/1000.0;
+	}
 	
 	public static void main(String args[]) {
 		Robot robot1 = new Robot("Watson",0,0,15,"north");
+		Robot robot2 = new Robot("Monica",3,4,10,"south");
 		System.out.println(robot1.giveName());
 		System.out.println(robot1.giveOrientation());
+		
+		double dist = robot1.giveDistance(robot2);
+		System.out.println(dist);
 	}
 }
