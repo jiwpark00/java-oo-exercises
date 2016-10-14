@@ -16,8 +16,13 @@ public class Robot {
 		this.orientation = orientation;
 	}
 	
+	
 	public String giveName() {
 		return name;
+	}
+	
+	public String giveOriginalOrientation() {
+		return orientation;
 	}
 	
 	public String giveOrientation() { // Minimalistic script. Don't feel like designing it all
