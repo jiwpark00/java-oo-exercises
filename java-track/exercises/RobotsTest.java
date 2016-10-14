@@ -12,6 +12,10 @@ public class RobotsTest {
 		assertEquals("Rey",r.giveName());
 		assertEquals("north",r.giveOriginalOrientation());
 		assertEquals("west",r.giveOrientation());
+		
+		Robot r2 = new Robot("Siri",10,4,11,"west");
+		assertEquals("Siri",r2.giveName());
+		assertEquals("south",r2.giveOrientation());
 	}
 	
 	public static void main(String[] args) {

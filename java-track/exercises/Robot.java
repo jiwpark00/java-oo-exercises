@@ -29,8 +29,14 @@ public class Robot {
 		if (this.orientation == "north") {
 			return "west";
 		}
-		else {
+		else if (this.orientation == "south") {
 			return "east";
+		}
+		else if (this.orientation == "east") {
+			return "north";
+		}
+		else {
+			return "south";
 		}
 	}
 	
