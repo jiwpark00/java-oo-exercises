@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import static org.junit.Assert.*;
-
-=======
->>>>>>> refs/remotes/launchcode/master
 import org.junit.Test;
 
 import junit.framework.TestCase;
