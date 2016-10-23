@@ -44,7 +44,7 @@ public class Javagram {
 		// TODO - pass filter ID int to getFilter, and get an instance of Filter back 
 		
 		
-		BlueFilter filter = getFilter();			
+		Filter filter = getFilter();			
 		
 		// filter and display image
 		Picture processed = filter.process(picture);
