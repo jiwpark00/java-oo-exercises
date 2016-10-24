@@ -3,11 +3,20 @@ package javagram;
 import javagram.filters.*;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Javagram {
-
+	
+	private Scanner s;
+	
+	private static int displayFilterMenu(Scanner in) {
+		System.out.println("Welcome to the filter addition!");
+		System.out.println("Option 1: Blue Filter");
+		return in.nextInt();
+	}
+	
 	public static void main(String[] args) {
 
 		// Create the base path for images		
@@ -40,6 +49,10 @@ public class Javagram {
 		} while(picture == null);
 		
 		// TODO - prompt user for filter and validate input
+		
+		int inputValue = displayFilterMenu(in);
+		System.out.println(inputValue);
+		
 		
 		// TODO - pass filter ID int to getFilter, and get an instance of Filter back 
 		
