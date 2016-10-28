@@ -99,15 +99,31 @@ public class Javagram {
 		
 		System.out.println("Save image to (relative to " + dir + ") (type 'exit' to quit w/o saving):");
 		String fileName = in.next();
+		boolean fileExists = true;
+		
+		String existingfile = dir + File.separator;
 		
 		// TODO - if the user enters the same file name as the input file, confirm that they want to overwrite the original
 		
 		if (fileName.equals("exit")) {
 			System.out.println("Image not saved");
 		} else {
-			String absFileName = dir + File.separator + fileName;
-			processed.save(absFileName);
-			System.out.println("Image saved to " + absFileName);
+			File f = new File(existingfile, fileName); // calls the file what you enter.
+			do {
+				if (f.exists()) { // only save when the file does not exists
+					System.out.println("It already exists!!");
+					System.out.println("Enter new name!");
+					fileName = in.next();
+					f = new File(existingfile, fileName);
+					continue;
+					}
+				else {
+					String absFileName = dir + File.separator + fileName;
+					processed.save(absFileName);
+					System.out.println("Image saved to " + absFileName);
+					fileExists = false;
+				}
+			} while (fileExists == true);
 		}	
 		
 		// close input scanner
