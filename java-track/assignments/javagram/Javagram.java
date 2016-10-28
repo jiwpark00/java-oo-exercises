@@ -17,6 +17,8 @@ public class Javagram {
 		System.out.println("Welcome to the filter addition!");
 		System.out.println("Be sure to enter numbers indicated below");
 		System.out.println("Option 1: Blue Filter");
+		System.out.println("Option 2: Inverse Filter");
+		System.out.println("Option 3: Grayscale Filter");
 		
 		Scanner scan = new Scanner(System.in);
 		boolean stillgoing = true;
@@ -26,7 +28,7 @@ public class Javagram {
 		try {
 		     String s = scan.nextLine();
 		     choice = Integer.parseInt(s);
-		     if (choice == 1) {
+		     if (choice == 1 || choice == 2 || choice == 3) {
 		    	 stillgoing = false;
 		     }
 		     else {
@@ -118,7 +120,13 @@ public class Javagram {
 		
 		// TODO - create some more filters, and add logic to return the appropriate one
 			if (inputValue == 1) {
-			return new BlueFilter();
+				return new BlueFilter();
+			}
+			else if (inputValue == 2 ) {
+				return new InverseFilter();
+			}
+			else if (inputValue == 3) {
+				return new GrayscaleFilter();
 			}
 			else {
 				return null;
