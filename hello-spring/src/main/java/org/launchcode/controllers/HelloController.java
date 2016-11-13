@@ -26,4 +26,19 @@ public class HelloController {
 		return "<h1>" + HelloMessage.getMessage(name) + "</h1>";
 	}
 	
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	@ResponseBody
+	public String login(HttpServletRequest request) {
+		// this is to get the request
+		
+		String username = request.getParameter("username");
+		
+		if (username == null) {
+			username = "fake user!!";
+			return "<h1> Alert the system, it is " + username;
+		}
+		
+		return "<h1> Welcome " + username + " and thanks for logging in today!";
+	}
+	
 }
