@@ -2,7 +2,10 @@ package org.launchcode.controllers;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.launchcode.models.HelloLog;
 import org.launchcode.models.HelloMessage;
+import org.launchcode.models.dao.HelloLogDao;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +14,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HelloController {
+	
+	@Autowired
+	private HelloLogDao helloLogDao;
 	
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 	public String helloForm() {
@@ -29,6 +35,9 @@ public class HelloController {
 		if (name == null || name == "") {
 			name = "world";
 		}
+		
+		HelloLog log = new HelloLog(name);
+		helloLogDao.save(log);
 		
 		model.addAttribute("message",HelloMessage.getMessage(name));
 		model.addAttribute("title", "Hello, Spring! Resonse");
