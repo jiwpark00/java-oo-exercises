@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 @Controller
 public class HelloController {
 	
@@ -42,6 +44,15 @@ public class HelloController {
 		model.addAttribute("message",HelloMessage.getMessage(name));
 		model.addAttribute("title", "Hello, Spring! Resonse");
 		return "hello";
+	}
+	
+	@RequestMapping(value = "/log")
+	public String log(Model model) {
+		// get data out of db
+		List<HelloLog> logs = helloLogDao.findAll();
+		// put data into template
+		model.addAttribute("logs", logs);
+		return "log";
 	}
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
